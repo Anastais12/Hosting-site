@@ -21,7 +21,7 @@ setInterval(saveDB, 30_000); // every 30 s
 
 app.use(cookie());
 app.use(express.json());
-app.use(express.static(__dirname)); // serve css, js, html
+app.use(express.static(path.join(__dirname, 'public')));
 
 // ---------------------------------
 // 1. Fake OAuth callback
@@ -46,7 +46,7 @@ app.get('/auth/callback', (req, res) => {
     sameSite: 'lax'
   });
 
-  res.redirect('/html/dashboard.html');
+  res.redirect('/public/html/dashboard.html');
 });
 
 // ---------------------------------
