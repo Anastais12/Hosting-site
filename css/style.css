@@ -1,0 +1,207 @@
+/* ========== RESET & ROOT ========== */
+:root {
+    --blurple: #5865f2;
+    --blurple-dark: #424fb3;
+    --bg: #1e1f22;
+    --surface: #2b2d31;
+    --surface-light: #404249;
+    --text: #dbdee1;
+    --text-muted: #b5bac1;
+    --radius: 8px;
+    --font: "Inter", system-ui, sans-serif;
+    --mono: "SFMono", "Consolas", monospace;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  /* ========== UTILS ========== */
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .cols-3 {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  
+  /* ========== HEADER ========== */
+  header {
+    background: var(--surface);
+    padding: 1rem 0;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    color: var(--blurple);
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  nav a:hover {
+    color: var(--text);
+  }
+  .cta {
+    background: var(--blurple);
+    color: #fff !important;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+  }
+  .cta:hover {
+    background: var(--blurple-dark);
+  }
+  
+  /* ========== HERO ========== */
+  .hero {
+    padding: 4rem 0 6rem;
+    text-align: center;
+  }
+  .hero-inner h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+  }
+  .hero-inner span {
+    color: var(--blurple);
+  }
+  .hero-inner p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: var(--text-muted);
+  }
+  
+  /* ========== BUTTONS ========== */
+  .btn-primary,
+  .btn-secondary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.15s, background 0.15s;
+  }
+  .btn-primary {
+    background: var(--blurple);
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background: var(--blurple-dark);
+    transform: translateY(-2px);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--blurple);
+    border: 1px solid var(--blurple);
+  }
+  .btn-secondary:hover {
+    background: var(--blurple);
+    color: #fff;
+  }
+  .large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+  
+  /* ========== FEATURES ========== */
+  .features {
+    padding: 4rem 0;
+    background: var(--surface);
+  }
+  .features h3 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+  }
+  .card {
+    background: var(--surface-light);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+  }
+/* === DASHBOARD === */
+.bot-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  .bot-table th,
+  .bot-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--surface-light);
+  }
+  .status.online {
+    color: #3ba55d;
+  }
+  .status.offline {
+    color: #ed4245;
+  }
+  
+  /* === EDITOR === */
+  .editor form {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+  }
+  .editor label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+  }
+  .editor input,
+  .editor select,
+  .editor textarea {
+    margin-top: 0.25rem;
+    padding: 0.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--surface-light);
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  /* === LOGS === */
+  .logs pre {
+    background: #111;
+    color: #00ff88;
+    padding: 1rem;
+    border-radius: var(--radius);
+    max-height: 60vh;
+    overflow-y: auto;
+    font-family: var(--mono);
+    white-space: pre-wrap;
+  }
+  nav a.active { color: var(--blurple); }

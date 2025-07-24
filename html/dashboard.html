@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard • BotNest</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a class="logo" href="index.html">BotNest</a>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li id="user-badge"><!-- filled by JS --></li>
+        <li><button id="logout-btn" class="btn-secondary small">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>My Bots</h2>
+    <a class="btn-primary" href="editor.html?new=true">+ Create new bot</a>
+
+    <table class="bot-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>RAM</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>MusicBot</td>
+          <td><span class="status online">Online</span></td>
+          <td>512 MB</td>
+          <td>
+            <a href="editor.html?bot=MusicBot">Edit</a> -
+            <a href="logs.html?bot=MusicBot">Logs</a>
+          </td>
+        </tr>
+        <tr>
+          <td>ModBot</td>
+          <td><span class="status offline">Offline</span></td>
+          <td>512 MB</td>
+          <td>
+            <a href="editor.html?bot=ModBot">Edit</a> -
+            <a href="logs.html?bot=ModBot">Logs</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BotNest</p>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/auth.js"></script>
+</body>
+</html>

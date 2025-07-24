@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing • BotNest</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a class="logo" href="index.html">BotNest</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html" class="active">Pricing</a></li>
+        <li><a href="login.html">Log In</a></li>
+        <li><a class="cta" href="login.html">Get Started</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero small">
+      <div class="container hero-inner">
+        <h2>Simple, transparent pricing</h2>
+        <p>Start free, scale when you’re ready. No hidden fees, ever.</p>
+      </div>
+    </section>
+
+    <!-- PLANS -->
+    <section class="pricing-details">
+      <div class="container">
+        <div class="grid cols-3">
+          <!-- HOBBY -->
+          <div class="plan">
+            <h3>Hobby</h3>
+            <div class="price">$0<span>/month</span></div>
+            <ul>
+              <li>512 MB RAM</li>
+              <li>1 shared CPU</li>
+              <li>1 GB SSD storage</li>
+              <li>Live logs</li>
+              <li>Community support</li>
+            </ul>
+            <a class="btn-secondary" href="login.html">Start Free</a>
+          </div>
+
+          <!-- PRO -->
+          <div class="plan featured">
+            <h3>Pro</h3>
+            <div class="price">$5<span>/month</span></div>
+            <ul>
+              <li>2 GB RAM</li>
+              <li>1 dedicated vCPU</li>
+              <li>10 GB SSD storage</li>
+              <li>Custom domain support</li>
+              <li>Priority email support</li>
+            </ul>
+            <a class="btn-primary" href="login.html">Go Pro</a>
+          </div>
+
+          <!-- ULTRA -->
+          <div class="plan">
+            <h3>Ultra</h3>
+            <div class="price">$15<span>/month</span></div>
+            <ul>
+              <li>4 GB RAM</li>
+              <li>2 dedicated vCPUs</li>
+              <li>50 GB SSD storage</li>
+              <li>Zero-downtime deploys</li>
+              <li>24-hour chat support</li>
+            </ul>
+            <a class="btn-secondary" href="login.html">Start Ultra</a>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <section class="faq">
+          <h3>Frequently asked questions</h3>
+
+          <details>
+            <summary>Can I upgrade or downgrade at any time?</summary>
+            <p>Yes. Changes take effect immediately and you’ll be billed pro-rata.</p>
+          </details>
+
+          <details>
+            <summary>What happens if I exceed my plan limits?</summary>
+            <p>Your bot is throttled; we’ll notify you and you can upgrade with one click.</p>
+          </details>
+
+          <details>
+            <summary>Is there a yearly discount?</summary>
+            <p>Absolutely—pay annually and get 2 months free on any plan.</p>
+          </details>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BotNest &middot; Not affiliated with Discord Inc.</p>
+    </div>
+  </footer>
+
+  <!-- Small CSS additions if you want them scoped -->
+  <style>
+    .hero.small { padding: 3rem 0 2rem; }
+    .pricing-details { padding: 4rem 0; }
+    .faq {
+      max-width: 700px;
+      margin: 4rem auto 0;
+    }
+    .faq h3 { margin-bottom: 1.5rem; text-align: center; }
+    details {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    summary {
+      font-weight: 600;
+      cursor: pointer;
+    }
+  </style>
+</body>
+</html>

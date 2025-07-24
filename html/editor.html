@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bot Editor • BotNest</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a class="logo" href="index.html">BotNest</a>
+      <ul>
+        <li><a href="dashboard.html">← Back to Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container editor">
+    <h2 id="bot-name">Edit Bot</h2>
+
+    <form>
+      <label>Git Repository
+        <input type="text" placeholder="https://github.com/user/repo.git"/>
+      </label>
+
+      <label>Branch / Tag
+        <input type="text" value="main"/>
+      </label>
+
+      <label>Runtime
+        <select>
+          <option value="node">Node 20</option>
+          <option value="python">Python 3.11</option>
+          <option value="go">Go 1.22</option>
+        </select>
+      </label>
+
+      <label>Environment Variables
+        <textarea rows="6" placeholder="TOKEN=your_bot_token&#10;PREFIX=!&#10;PORT=3000"></textarea>
+      </label>
+
+      <button class="btn-primary" type="submit">Save & Deploy</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BotNest</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Logs • BotNest</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a class="logo" href="index.html">BotNest</a>
+      <ul>
+        <li><a href="dashboard.html">← Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container logs">
+    <h2>Logs – <span id="bot-name">MusicBot</span></h2>
+    <button class="btn-secondary" id="clear-btn">Clear</button>
+    <pre id="log-area">2025-07-24 12:00:00 [INFO] Logged in as MusicBot#1234  
+2025-07-24 12:00:01 [INFO] Loaded 7 cogs  
+2025-07-24 12:00:05 [INFO] Connected to voice channel  
+…</pre>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BotNest</p>
+    </footer>
+  </footer>
+
+  <script>
+    // Demo live log tail
+    const logArea = document.getElementById('log-area');
+    const ws = new WebSocket(`wss://botnest.app/logs/${new URLSearchParams(location.search).get('bot')}`);
+    ws.onmessage = e => logArea.textContent += e.data + '\n';
+  </script>
+</body>
+</html>

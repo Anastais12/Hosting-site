@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Features • BotNest</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a class="logo" href="index.html">BotNest</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html" class="active">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="login.html">Log In</a></li>
+        <li><a class="cta" href="login.html">Get Started</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero small">
+      <div class="container hero-inner">
+        <h2>Everything you need to run a Discord bot</h2>
+        <p>From first commit to 24/7 uptime, BotNest has you covered.</p>
+      </div>
+    </section>
+
+    <!-- FEATURE GRID -->
+    <section class="feature-grid">
+      <div class="container">
+        <article class="feature">
+          <span class="emoji">🚀</span>
+          <div>
+            <h3>One-Click Deploy</h3>
+            <p>Push to GitHub or upload a ZIP. Your bot is live in seconds—no Dockerfile required.</p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <span class="emoji">📊</span>
+          <div>
+            <h3>Live Logs & Metrics</h3>
+            <p>Watch stdout/stderr in real time. CPU, RAM, and network graphs updated every 5 s.</p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <span class="emoji">🔁</span>
+          <div>
+            <h3>Auto-Restart & Health Checks</h3>
+            <p>Container crashes? We restart it. Custom health endpoints keep downtime near zero.</p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <span class="emoji">🌐</span>
+          <div>
+            <h3>Global Edge Proxy</h3>
+            <p>Low-latency REST endpoints in 8 regions via anycast IP—perfect for slash commands.</p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <span class="emoji">🔒</span>
+          <div>
+            <h3>Encrypted Secrets</h3>
+            <p>Bot tokens and environment variables are sealed at rest and never exposed in the UI.</p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <span class="emoji">🧩</span>
+          <div>
+            <h3>Marketplace Templates</h3>
+            <p>Launch popular open-source bots (music, leveling, moderation) with one click.</p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <span class="emoji">⚡</span>
+          <div>
+            <h3>Zero-Downtime Upgrades</h3>
+            <p>Switch plans or runtime versions without stopping your bot.</p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <span class="emoji">📈</span>
+          <div>
+            <h3>Usage Alerts</h3>
+            <p>Get Slack or Discord DMs when RAM or CPU crosses your custom thresholds.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPARISON TABLE -->
+    <section class="comparison">
+      <div class="container">
+        <h3>How we stack up</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>BotNest</th>
+                <th>Self-host VPS</th>
+                <th>Other PaaS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Deploy time</td>
+                <td>30 s</td>
+                <td>30 min</td>
+                <td>2-5 min</td>
+              </tr>
+              <tr>
+                <td>SSL & reverse proxy</td>
+                <td>Automatic</td>
+                <td>Manual</td>
+                <td>Manual</td>
+              </tr>
+              <tr>
+                <td>Secrets management</td>
+                <td>Encrypted at rest</td>
+                <td>Plain text files</td>
+                <td>Depends</td>
+              </tr>
+              <tr>
+                <td>Auto-restart</td>
+                <td>Built-in</td>
+                <td>Setup systemd</td>
+                <td>Usually</td>
+              </tr>
+              <tr>
+                <td>Global edge endpoints</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>Paid add-on</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <h3>Ready to try it?</h3>
+        <a class="btn-primary large" href="login.html">Start Free</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BotNest &middot; Not affiliated with Discord Inc.</p>
+    </div>
+  </footer>
+
+  <!-- Extra CSS scoped to this page -->
+  <style>
+    .feature-grid {
+      padding: 4rem 0;
+      display: grid;
+      gap: 2rem;
+    }
+    .feature {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+    }
+    .feature .emoji {
+      font-size: 2.2rem;
+      flex-shrink: 0;
+    }
+    .comparison {
+      background: var(--surface);
+      padding: 4rem 0;
+    }
+    .table-wrapper {
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+    th, td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--surface-light);
+    }
+    th {
+      font-weight: 600;
+      color: var(--blurple);
+    }
+    @media (min-width: 768px) {
+      .feature-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</body>
+</html>
